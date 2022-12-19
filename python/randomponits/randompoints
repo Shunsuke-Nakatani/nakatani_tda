@@ -1,0 +1,12 @@
+import numpy as np
+import pandas as pd
+import random
+x_list = []
+y_list = []
+z_list = []
+for i in range(5000):
+    x_list.append(random.random())
+    y_list.append(random.random())
+    z_list.append(random.random())
+dataset = pd.DataFrame({'x':x_list,'y':y_list,'z':z_list})
+dataset.to_csv("5000random2.txt", sep=" ", index=False)
